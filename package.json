@@ -1,9 +1,13 @@
 {
-  "name": "schneider-weisse-vercel",
+  "name": "schneider-weisse-vite",
   "version": "1.0.0",
-  "description": "Schneider Weisse Brauhaus website adapted for Vercel Serverless Functions",
+  "private": true,
   "scripts": {
-    "build": "echo 'No build step required'",
-    "dev": "vercel dev"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
   }
 }

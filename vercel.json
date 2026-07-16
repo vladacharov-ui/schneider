@@ -1,10 +1,8 @@
 {
-  "version": 2,
-  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/api/sendTelegram",
-      "destination": "/api/sendTelegram.js"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     }
   ]
 }
