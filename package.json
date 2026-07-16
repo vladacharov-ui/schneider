@@ -1,0 +1,9 @@
+{
+  "name": "schneider-weisse-vercel",
+  "version": "1.0.0",
+  "description": "Schneider Weisse Brauhaus website adapted for Vercel Serverless Functions",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "dev": "vercel dev"
+  }
+}

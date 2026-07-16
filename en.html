@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Official website of the Schneider Weisse Brauhaus restaurant. Located in the central historical part of Rostov-on-Don, Beregovaya 27c. Bavarian aesthetics, premium cuisine and original beer.">
+  <title>Schneider Weisse Brauhaus Restaurant in Rostov-on-Don | Official Website</title>
+  
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Schneider Weisse Brauhaus Restaurant in Rostov-on-Don | Official Website">
+  <meta property="og:description" content="Bavarian premium class restaurant Schneider Weisse Brauhaus in the historic center of Rostov-on-Don. Authentic cuisine, rooftop summer terraces with Don views and legendary beers.">
+  <meta property="og:image" content="https://schneider-weisse.ru/images/schneider-logo.png">
+  <meta property="og:url" content="https://schneider-weisse.ru/en.html">
+  <meta property="og:type" content="website">
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" type="image/png" href="https://schneider-weisse.ru/images/schneider-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=4.9">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader-overlay">
+    <canvas id="preloader-canvas"></canvas>
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <img class="preloader-logo" src="https://schneider-weisse.ru/images/schneider-logo.png" alt="Schneider Weisse Logo">
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar" id="preloader-progress"></div>
+      </div>
+      <div class="preloader-percentage" id="preloader-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Fixed Header Navigation -->
+  <header id="site-header" class="main-header">
+    <div class="header-container">
+      <a class="header-logo" href="#hero" aria-label="Go to top">
+        <img src="https://schneider-weisse.ru/images/schneider-logo.png" alt="Schneider Weisse Logo">
+        <span class="logo-title font-display">Schneider Weisse</span>
+      </a>
+      
+      <nav class="desktop-nav" aria-label="Main menu">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#history" class="nav-link">History</a></li>
+          <li><a href="#interior" class="nav-link">Interior</a></li>
+          <li><a href="#menu-section" class="nav-link">Menu</a></li>
+          <li><a href="#chef" class="nav-link">Chef</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contacts" class="nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Opens modal directly -->
+        <button class="btn-nav-cta js-open-booking">
+          <span>Book Table</span>
+        </button>
+        <a class="lang-switch" href="index.html" title="Перейти на Русский" aria-label="Перейти на Русский">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.33 50.57" width="28" height="19">
+            <rect x="0.19" y="33.5" width="75" height="16.67" fill="#e22e0d" />
+            <rect x="0.19" y="16.97" width="75" height="16.67" fill="#2d2784" />
+            <rect x="0.19" y="0.28" width="75" height="16.67" fill="#fff" />
+          </svg>
+        </a>
+        <button class="burger-menu" id="burger-toggle" aria-label="Open mobile navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-nav-panel" class="mobile-nav-overlay">
+    <div class="mobile-nav-content">
+      <ul class="mobile-menu-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#history" class="mobile-nav-link">History</a></li>
+        <li><a href="#interior" class="mobile-nav-link">Interior</a></li>
+        <li><a href="#menu-section" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#chef" class="mobile-nav-link">Chef</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#contacts" class="mobile-nav-link">Contacts</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <button class="btn btn-primary mobile-book-btn js-open-booking">Book Table</button>
+        <div class="mobile-socials">
+          <a href="https://vk.com/schneiderweisses" target="_blank" class="social-link" aria-label="VKontakte">VK</a>
+          <a href="https://t.me/schneiderweisse" target="_blank" class="social-link" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smooth Scroll Wrapper -->
+  <div id="scroll-wrapper">
+
+    <!-- Hero Screen (Minimalist Centered Composition) -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-wrapper js-parallax-bg">
+        <div class="hero-overlay"></div>
+        <img class="hero-image" src="images/hero-bg.jpg" alt="Schneider Weisse Brauhaus">
+      </div>
+      <div class="hero-container container text-center">
+        <div class="hero-content hero-centered-flow">
+          <div class="hero-logo-wrap">
+            <img src="https://schneider-weisse.ru/images/schneider-logo.png" alt="Schneider Weisse Logo" class="hero-brand-logo">
+          </div>
+          <h1 class="hero-title font-display">SCHNEIDER WEISSE</h1>
+          <div class="hero-btns">
+            <!-- Triggers modal directly -->
+            <button class="btn btn-secondary btn-glass hero-booking-btn js-open-booking">
+              <span>Book Table</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section Wrapper -->
+    <main>
+
+      <!-- About Section -->
+      <section id="about" class="about-section section-padding theme-light">
+        <div class="container grid-two">
+          <div class="about-info gs-reveal-left">
+            <span class="section-tag font-display">01 / Our Concept</span>
+            <h2 class="section-title font-display">Bavarian Soul on <br>the River Don</h2>
+            <p class="lead-text">The concept of the Schneider Weisse Brauhaus in Rostov-on-Don is directly inspired by the famous beer house of the same name in Munich.</p>
+            <p>It is headed in the sixth generation by the Schneider family. We have carefully translated the Munich spirit of hospitality and premium aesthetics to the bank of the Don River. Our restaurant is located in the central historical part of Rostov-on-Don, in a building built in the mid-19th century. The preserved original brickwork highlights the authentic view, bringing together German traditions and Don history.</p>
+            
+            <div class="about-features-small">
+              <div class="feat-item">
+                <span class="feat-num font-display">1872</span>
+                <span class="feat-label">Brewery Founded</span>
+              </div>
+              <div class="feat-item">
+                <span class="feat-num font-display">XIX Century</span>
+                <span class="feat-label">Building Built</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-media gs-reveal-right">
+            <div class="image-reveal-wrap">
+              <div class="image-overlay-reveal"></div>
+              <img src="https://schneider-weisse.ru/images/about.jpg" alt="Schneider Weisse Hall" class="parallax-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History & Family Section -->
+      <section id="history" class="history-section section-padding theme-dark">
+        <div class="container grid-two">
+          <div class="history-media gs-reveal-left">
+            <div class="image-reveal-wrap">
+              <div class="image-overlay-reveal"></div>
+              <img src="https://schneider-weisse.ru/images/header-img-short.jpg" alt="Schneider Weisse Brewery" class="parallax-img">
+            </div>
+          </div>
+          <div class="history-info gs-reveal-right">
+            <span class="section-tag font-display">02 / Heritage</span>
+            <h2 class="section-title font-display">The Schneider Dynasty</h2>
+            <p class="lead-text">For over a century and a half, the Schneider Weisse brewery has remained a family business, carefully passing recipes down from father to son.</p>
+            <p>Led by the sixth generation of the Schneider family, the Munich mark has become a worldwide symbol of perfect wheat beer. Every brew is a chapter of history, crafted in strict compliance with the Bavarian Beer Purity Law of 1516 (Reinheitsgebot). In Rostov-on-Don, we are proud to offer our guests these legendary flavors paired with our exclusive gastronomy menu.</p>
+            <div class="quote-card glass-card">
+              <p class="quote-text">"Quality is not something you control in a laboratory. It is something you pour into the beer with your soul and the labor of generations."</p>
+              <cite class="quote-author font-display">— Georg VI Schneider</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Schneider Weisse (Aesthetic Grid) -->
+      <section id="why-us" class="why-section section-padding theme-light">
+        <div class="container">
+          <div class="section-header text-center gs-reveal-y">
+            <span class="section-tag font-display">03 / Special features</span>
+            <h2 class="section-title font-display">Bavarian Atmosphere</h2>
+          </div>
+          <div class="why-grid">
+            
+            <div class="why-card glass-card gs-reveal-y">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                  <path d="M2,21H22V19H2V21M20,3H4A2,2 0 0,0 2,5V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V5A2,2 0 0,0 20,3M20,17H4V5H20V17Z" />
+                </svg>
+              </div>
+              <h3 class="why-title font-display">Historical Mansion</h3>
+              <p>Authentic mid-19th-century architecture with original brickwork creates a unique atmosphere of European luxury.</p>
+            </div>
+
+            <div class="why-card glass-card gs-reveal-y">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                  <path d="M12,2A10,10 0 0,0 2,12C2,16.58 5.08,20.43 9.25,21.5C9.75,21.6 10,21.3 10,21C10,20.75 10,20 10,19.25C6.75,20 6,18 6,18C5.5,16.75 4.75,16.5 4.75,16.5C3.75,15.75 4.75,15.75 4.75,15.75C5.75,15.85 6.25,16.85 6.25,16.85C7.25,18.5 8.75,18 9.25,17.75C9.35,17 9.65,16.5 10,16.25C7.25,16 4.5,15 4.5,10.25C4.5,8.85 5,7.75 5.85,6.85C5.75,6.5 5.25,5.25 6,3.6C6,3.6 7,3.3 9.25,4.8C10.25,4.5 11.25,4.35 12.25,4.35C13.25,4.35 14.25,4.5 15.25,4.8C17.5,3.3 18.5,3.6 18.5,3.6C19.25,5.25 18.75,6.5 18.6,6.85C19.5,7.75 20,8.85 20,10.25C20,15 17.25,16 14.5,16.25C15,16.75 15.5,17.75 15.5,19.25C15.5,20.75 15.5,21 15.5,21C15.5,21.3 15.75,21.6 16.25,21.5C20.42,20.43 23.5,16.58 23.5,12A10,10 0 0,0 12,2Z" />
+                </svg>
+              </div>
+              <h3 class="why-title font-display">Roof Terraces</h3>
+              <p>Two spacious panoramic summer rooftops offer marvelous, breathtaking views of the majestic Don River.</p>
+            </div>
+
+            <div class="why-card glass-card gs-reveal-y">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                  <path d="M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3M12,19A7,7 0 0,1 5,12A7,7 0 0,1 12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19M11.5,7H12.5V11.75L16.25,14L15.75,14.75L11.5,12.25V7Z" />
+                </svg>
+              </div>
+              <h3 class="why-title font-display">Bavarian Style</h3>
+              <p>The interior structure and traditional outfits of our staff strictly match the authentic Munich restaurant standard.</p>
+            </div>
+
+            <div class="why-card glass-card gs-reveal-y">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                  <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16Z" />
+                </svg>
+              </div>
+              <h3 class="why-title font-display">Lounge Evenings</h3>
+              <p>From Tuesday to Sunday, professional music bands fill our halls with cozy, elegant lounge notes.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Chef Section -->
+      <section id="chef" class="chef-section section-padding theme-dark">
+        <div class="container grid-two">
+          <div class="chef-media gs-reveal-left">
+            <div class="image-reveal-wrap">
+              <div class="image-overlay-reveal"></div>
+              <img src="https://schneider-weisse.ru/images/chef2.jpg" alt="Chef Yuri Yubuzov" class="parallax-img">
+            </div>
+          </div>
+          <div class="chef-info gs-reveal-right">
+            <span class="section-tag font-display">04 / Gastronomy</span>
+            <h2 class="section-title font-display">Chef Yuri Yubuzov</h2>
+            <p class="lead-text">Munich craft culinary expertise meets local Don specialties.</p>
+            <p>Our chef Yuri Yubuzov designs unique gastronomic combinations for guests of Schneider Weisse Brauhaus. Colossal experience gained in Munich restaurants allows him to create famous dishes of German cuisine, harmonized with European recipes and local ingredients of high quality. Yuri's signature style is the perfect pairing of dishes with unique varieties of German beer Schneider.</p>
+            
+            <div class="signature-dish glass-card">
+              <span class="tag-gold font-display">Chef's Selection</span>
+              <h4 class="dish-title font-display">Pork Knuckle in TAP-7 Beer Glaze</h4>
+              <p class="dish-desc">Served with traditional sauerkraut and potato dumplings. Pairs wonderfully with a fresh glass of Schneider Weisse TAP-7 Unser Original.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interior Section Carousel & Details -->
+      <section id="interior" class="interior-section section-padding theme-light">
+        <div class="container">
+          <div class="grid-two align-center">
+            <div class="interior-info gs-reveal-left">
+              <span class="section-tag font-display">05 / Dine In</span>
+              <h2 class="section-title font-display">Elegant Eclecticism</h2>
+              <p class="lead-text">The restaurant occupies 2 spacious floors and has several rooms in Bavarian style.</p>
+              <p>The style eclecticism of wood, antique brick, metal guides, leather armchairs, and soft carpets combined with warm diffused light creates a cozy atmosphere. Old German engravings placed on all walls give the interior the atmosphere of an old gallery.</p>
+            </div>
+            <div class="interior-carousel-wrapper gs-reveal-right">
+              <div class="slider-nav">
+                <button class="slider-btn prev-btn" aria-label="Previous slide">&#8592;</button>
+                <button class="slider-btn next-btn" aria-label="Next slide">&#8594;</button>
+              </div>
+              <div class="interior-slider">
+                <div class="slide-item active">
+                  <img src="images/interier/1_1.jpg" alt="Interior 1">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/1_2.jpg" alt="Interior 2">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/1.jpg" alt="Interior 3">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/2.jpg" alt="Interior 4">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/3.jpg" alt="Interior 5">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/4.jpg" alt="Interior 6">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/5.jpg" alt="Interior 7">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/6.jpg" alt="Interior 8">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/7.jpg" alt="Interior 9">
+                </div>
+                <div class="slide-item">
+                  <img src="images/interier/8.jpg" alt="Interior 10">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Menu Section -->
+      <section id="menu-section" class="menu-section section-padding theme-dark">
+        <div class="container">
+          <div class="section-header text-center gs-reveal-y">
+            <span class="section-tag font-display">06 / gastronomy cards</span>
+            <h2 class="section-title font-display">Our Menu</h2>
+            <p class="section-subtitle">Bavarian classics, juicy meat specialties, local Don river fish, and premium craft beers.</p>
+          </div>
+
+          <!-- Menu Category Filters -->
+          <div class="menu-filters-wrap gs-reveal-y">
+            <button class="menu-filter-btn active" data-category="kitchen">Kitchen</button>
+            <button class="menu-filter-btn" data-category="beer">Beer</button>
+            <button class="menu-filter-btn" data-category="bar">Bar</button>
+            <button class="menu-filter-btn" data-category="kids">Children Menu</button>
+            <button class="menu-filter-btn" data-category="specials">Specials</button>
+          </div>
+
+          <!-- Grid of Dish Cards -->
+          <div class="menu-grid gs-reveal-y" id="menu-grid-items">
+            <!-- Cards loaded dynamically via JS -->
+          </div>
+
+          <!-- Original PDF Menus Links -->
+          <div class="original-menus-box glass-card text-center gs-reveal-y">
+            <h4 class="box-title font-display">Official PDF Menus</h4>
+            <p class="box-text">For the full menu and bar selections, view our official documents below:</p>
+            <div class="pdf-links">
+              <a href="https://schneider-weisse.ru/docs/SCHNEIDER Меню Кухня_23.04.25_ENG.pdf" target="_blank" class="pdf-btn"><span class="icon">📄</span> Restaurant Menu (April 2025)</a>
+              <a href="https://schneider-weisse.ru/docs/2025/Шнайдер_Меню_Бар_июль 2025.pdf" target="_blank" class="pdf-btn"><span class="icon">📄</span> Bar Menu (July 2025)</a>
+              <a href="https://schneider-weisse.ru/docs/2022/2022_05_03_SCHNEIDER_ДетскоеМеню_.pdf" target="_blank" class="pdf-btn"><span class="icon">📄</span> Children Menu</a>
+              <a href="https://schneider-weisse.ru/docs/2025/postnoe-menu-02-03-2025.pdf" target="_blank" class="pdf-btn"><span class="icon">📄</span> Special Offer</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery (Masonry Grid with Custom Lightbox) -->
+      <section id="gallery" class="gallery-section section-padding theme-light">
+        <div class="container">
+          <div class="section-header text-center gs-reveal-y">
+            <span class="section-tag font-display">07 / Chronicle</span>
+            <h2 class="section-title font-display">Atmosphere in Details</h2>
+            <p class="section-subtitle">Take a glimpse of our Bavarian gastrodinners, beautiful interior spaces, and custom service.</p>
+          </div>
+          
+          <div class="masonry-grid gs-reveal-y">
+            <div class="masonry-item">
+              <img src="images/gallery/1.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Bavarian Gastrodinner</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/2.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Gala Settings</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/3.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Gourmet Platters</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/5.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Legendary Beers</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/7.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">German Sausages</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/9.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Our Guests</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/12.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Fine Desserts</span>
+              </div>
+            </div>
+            <div class="masonry-item">
+              <img src="images/gallery/15.jpg" alt="Bavarian Gastrodinner at Schneider" class="gallery-img">
+              <div class="gallery-hover-overlay">
+                <span class="gallery-img-title font-display">Cozy Dining Hall</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compact Booking CTA section -->
+      <section class="booking-cta-section section-padding theme-dark">
+        <div class="container text-center gs-reveal-y">
+          <span class="section-tag font-display">Booking</span>
+          <h2 class="section-title font-display">Would you like to spend an evening with us?</h2>
+          <p class="section-subtitle">Book a table online right now. Our manager will contact you to confirm reservation details.</p>
+          <button class="btn btn-primary btn-lg js-open-booking" style="padding: 20px 50px;">
+            <span>Book Table</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Contacts & Map Section -->
+      <section id="contacts" class="contacts-section section-padding theme-light">
+        <div class="container grid-two">
+          <div class="contacts-info gs-reveal-left">
+            <span class="section-tag font-display">08 / Location</span>
+            <h2 class="section-title font-display">Contacts</h2>
+            <div class="contacts-details">
+              <div class="contact-detail-block">
+                <h4 class="font-display">Address</h4>
+                <p>Rostov-on-Don, Beregovaya Street 27c (central historical district)</p>
+                <a href="https://yandex.ru/maps/-/CBUJa0ubgB" target="_blank" class="link-gold">Open Yandex Maps →</a>
+              </div>
+              <div class="contact-detail-block">
+                <h4 class="font-display">Phone</h4>
+                <p><a href="tel:89282709242" class="link-phone">8 (928) 270-92-42</a></p>
+              </div>
+              <div class="contact-detail-block">
+                <h4 class="font-display">Hours</h4>
+                <p>Daily 11:00 to 00:00</p>
+              </div>
+              <div class="contact-detail-block">
+                <h4 class="font-display">Socials</h4>
+                <div class="social-icons-row">
+                  <a href="https://vk.com/schneiderweisses" target="_blank" class="social-icon-btn" aria-label="VKontakte">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path d="M20.8,7.74C20.93,7.32 20.8,7 20.18,7H18.16C17.64,7 17.41,7.27 17.28,7.57C17.28,7.57 16.25,10.08 14.79,11.72C14.31,12.19 14.1,12.34 13.84,12.34C13.71,12.34 13.5,12.19 13.5,11.76V7.74C13.5,7.23 13.38,7 12.95,7H9.76C9.44,7 9.25,7.24 9.25,7.47C9.25,7.95 10,8.07 10.05,9.44V12.42C10.05,13.08 9.93,13.2 9.68,13.2C9,13.2 7.32,10.67 6.33,7.79C6.13,7.23 5.94,7 5.42,7H3.39C2.82,7 2.7,7.27 2.7,7.57C2.7,8.11 3.39,10.77 5.9,14.29C7.57,16.7 9.93,18 12.08,18C13.37,18 13.53,17.71 13.53,17.21V15.39C13.53,14.82 13.65,14.7 14.06,14.7C14.36,14.7 14.87,14.85 16.07,16C17.45,17.38 17.67,18 18.45,18H20.47C21.05,18 21.34,17.71 21.18,17.14C21,16.57 20.34,15.74 19.47,14.76C19,14.21 18.29,13.61 18.07,13.3C17.77,12.92 17.86,12.75 18.07,12.4C18.07,12.4 20.54,8.93 20.8,7.74Z" />
+                    </svg>
+                  </a>
+                  <a href="https://t.me/schneiderweisse" target="_blank" class="social-icon-btn" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.6.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.25-.02-.11.02-1.91 1.21-5.4 3.56-.51.35-.97.52-1.38.51-.46-.01-1.34-.26-1.99-.47-.8-.26-1.43-.4-1.38-.85.03-.24.36-.48.99-.74 3.88-1.69 6.46-2.8 7.74-3.35 3.69-1.54 4.45-1.81 4.95-1.82.11 0 .36.03.52.16.14.11.18.26.19.38 0 .07.01.16.02.24z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-map-wrap gs-reveal-right">
+            <div class="map-inner glass-card" style="padding: 0; line-height: 0; height: 450px;">
+              <iframe src="https://yandex.ru/map-widget/v1/-/CTRBiCzp" width="100%" height="450" frameborder="0" style="border:0; filter: invert(90%) hue-rotate(180deg) grayscale(80%); display: block;" title="Directions map to the restaurant"></iframe>
+            </div>
+            <a href="https://yandex.ru/maps/-/CTRBiCzp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block text-center" style="display: flex; justify-content: center; align-items: center; text-decoration: none; padding: 18px 30px;">
+              <span>Get Directions</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <img src="https://schneider-weisse.ru/images/weisses-brauhaus.svg" alt="Weisses Brauhaus Logo" class="footer-svg-logo">
+        </div>
+        <p class="footer-tagline font-display">Bavarian Quality Traditions on the Don River</p>
+        <div class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#history">History</a>
+          <a href="#interior">Interior</a>
+          <a href="#menu-section">Menu</a>
+          <a href="#chef">Chef</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contacts">Contacts</a>
+        </div>
+        <div class="footer-documents" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 10px; margin-bottom: 45px; font-family: var(--font-display); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: var(--text-muted);">
+          <span style="color: var(--accent-orange); margin-right: 5px;">Documents:</span>
+          <a href="en-documents.html?doc=privacy" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-fast);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">Privacy Policy</a>
+          <a href="en-documents.html?doc=consent" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-fast);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">Personal Data Consent</a>
+          <a href="en-documents.html?doc=terms" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-fast);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">User Agreement</a>
+          <a href="en-documents.html?doc=requisites" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-fast);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-muted)'">Requisites</a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Schneider Weisse Brauhaus (Rostov-on-Don). All rights reserved.</p>
+          <p class="footer-subtext">This website was created solely based on the official restaurant information.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Custom Fullscreen Lightbox / Gallery Viewer -->
+  <div id="gallery-lightbox" class="lightbox-overlay">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous image">&#8592;</button>
+    <button class="lightbox-arrow lightbox-next" aria-label="Next image">&#8594;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img">
+      <span class="lightbox-caption font-display"></span>
+    </div>
+  </div>
+
+  <!-- Dish Detail Modal -->
+  <div id="dish-modal" class="modal-overlay">
+    <div class="modal-container glass-card">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-info">
+          <span class="modal-tag font-display">Signature Choice</span>
+          <h3 class="modal-title font-display"></h3>
+          <span class="modal-price font-display"></span>
+          <p class="modal-desc"></p>
+          <div class="modal-footer">
+            <span class="modal-pairing-title font-display">Perfect Beer Pairing:</span>
+            <p class="modal-pairing-text">We recommend ordering this delicacy in combination with a cold glass of Schneider Weisse TAP-7.</p>
+            <a href="#booking" class="btn btn-primary modal-book-btn">Book Table</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Fullscreen Glassmorphic Booking Modal (UX Fix) -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-container glass-card" style="max-width: 600px;">
+      <button class="modal-close" id="booking-modal-close" aria-label="Close">✕</button>
+      <div class="modal-info" style="padding: 40px;">
+        <span class="modal-tag font-display">Reservations</span>
+        <h3 class="modal-title font-display" style="font-size: 1.8rem; margin-bottom: 20px;">Book a Table</h3>
+        <form id="contact-booking-form" class="interactive-form" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-name">Your Name *</label>
+              <input type="text" id="booking-name" name="name" placeholder="John Doe" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-phone">Phone Number *</label>
+              <input type="tel" id="booking-phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+            </div>
+          </div>
+          <div class="form-row grid-three-fields">
+            <div class="form-group">
+              <label for="booking-guests">Number of Guests *</label>
+              <input type="number" id="booking-guests" name="person" min="1" max="50" placeholder="2" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-date">Date *</label>
+              <input type="date" id="booking-date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-time">Time *</label>
+              <select id="booking-time" name="time" required>
+                <option value="" disabled selected>Select time</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="13:30">1:30 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="14:30">2:30 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="15:30">3:30 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="16:30">4:30 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="17:30">5:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+                <option value="21:00">9:00 PM</option>
+                <option value="21:30">9:30 PM</option>
+                <option value="22:00">10:00 PM</option>
+                <option value="22:30">10:30 PM</option>
+                <option value="23:00">11:00 PM</option>
+                <option value="23:30">11:30 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row" style="margin-top: 10px; margin-bottom: 15px; display: flex; flex-direction: column; gap: 12px; text-align: left;">
+            <label class="checkbox-container" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.72rem; color: var(--text-muted); cursor: pointer; line-height: 1.4; user-select: none;">
+              <input type="checkbox" id="booking-agree-data" name="agree_data" required style="margin-top: 3px; width: auto; height: auto; accent-color: var(--accent-orange); cursor: pointer;">
+              <span>I agree to the processing of personal data and accept the terms of the <a href="en-documents.html?doc=privacy" target="_blank" style="color: var(--accent-orange); text-decoration: underline;">Privacy Policy</a> and <a href="en-documents.html?doc=consent" target="_blank" style="color: var(--accent-orange); text-decoration: underline;">Personal Data Consent</a> *</span>
+            </label>
+            <label class="checkbox-container" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.72rem; color: var(--text-muted); cursor: pointer; line-height: 1.4; user-select: none;">
+              <input type="checkbox" id="booking-agree-promo" name="agree_promo" style="margin-top: 3px; width: auto; height: auto; accent-color: var(--accent-orange); cursor: pointer;">
+              <span>I agree to receive news, promotions, and special offers</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Send Request</span>
+          </button>
+          <div id="booking-success-message" class="form-success-alert hidden">
+            <span class="alert-icon">✓</span>
+            <div class="alert-content">
+              <h5 class="font-display">Request Sent!</h5>
+              <p>Our administrator will contact you shortly to confirm your booking.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN scripts: GSAP & Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  
+  <!-- Script -->
+  <script src="js/main.js?v=4.9"></script>
+</body>
+</html>

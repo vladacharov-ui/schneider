@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Documents — Schneider Weisse Brauhaus</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <style>
+    :root {
+      --bg-primary: #f6f4ee;
+      --bg-dark: #040404;
+      --border-glass: rgba(0, 0, 0, 0.08);
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --accent-orange: #d97824;
+      --accent-gold: #c5a880;
+      --text-main: #1a1918;
+      --text-muted: #7c7a74;
+      --text-light: #ffffff;
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --transition-smooth: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-orange);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Header */
+    .site-header {
+      background-color: var(--bg-dark);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .header-container {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .back-link {
+      color: var(--text-light);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      border: 1px solid var(--border-dark);
+      padding: 10px 20px;
+      transition: var(--transition-smooth);
+    }
+
+    .back-link:hover {
+      border-color: var(--accent-orange);
+      color: var(--accent-orange);
+      transform: translateY(-2px);
+    }
+
+    /* Layout */
+    .docs-layout {
+      width: 90%;
+      max-width: 1400px;
+      margin: 60px auto 100px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 50px;
+    }
+
+    /* Sidebar Navigation */
+    .docs-sidebar {
+      position: sticky;
+      top: 40px;
+      height: fit-content;
+    }
+
+    .docs-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 30px;
+      color: var(--bg-dark);
+      font-weight: 800;
+    }
+
+    .nav-tabs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tab-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 15px 20px;
+      background: transparent;
+      border: 1px solid var(--border-glass);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      border-color: var(--bg-dark);
+      transform: translateX(5px);
+    }
+
+    /* Mobile Selector */
+    .mobile-selector-wrap {
+      display: none;
+      margin-bottom: 30px;
+    }
+
+    .mobile-selector {
+      width: 100%;
+      padding: 15px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background-color: #fff;
+      border: 1px solid var(--border-glass);
+      color: var(--text-main);
+      border-radius: 4px;
+    }
+
+    /* Content Pane */
+    .docs-content {
+      background: #ffffff;
+      padding: 50px;
+      border: 1px solid var(--border-glass);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    }
+
+    .doc-section {
+      display: none;
+    }
+
+    .doc-section.active {
+      display: block;
+      animation: fadeIn 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .doc-section h1 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 30px;
+      color: var(--bg-dark);
+      border-bottom: 2px solid var(--accent-orange);
+      padding-bottom: 15px;
+    }
+
+    .doc-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 35px 0 15px;
+      color: var(--bg-dark);
+    }
+
+    .doc-section p {
+      margin-bottom: 20px;
+      color: var(--text-main);
+      text-align: justify;
+    }
+
+    .doc-section ul, .doc-section ol {
+      margin-left: 20px;
+      margin-bottom: 25px;
+      color: var(--text-main);
+    }
+
+    .doc-section li {
+      margin-bottom: 10px;
+    }
+
+    /* Requisites Table */
+    .requisites-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    .requisites-table th, .requisites-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border-glass);
+      text-align: left;
+    }
+
+    .requisites-table th {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      width: 35%;
+    }
+
+    .requisites-table td {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .editable-hint {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent-orange);
+      font-style: italic;
+      margin-left: 10px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-dark);
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom p {
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .docs-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .docs-sidebar {
+        position: relative;
+        top: 0;
+      }
+      .nav-tabs {
+        display: none;
+      }
+      .mobile-selector-wrap {
+        display: block;
+      }
+      .docs-content {
+        padding: 30px;
+      }
+      .doc-section h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="en.html" class="logo">
+        <img src="https://schneider-weisse.ru/images/weisses-brauhaus.svg" alt="Weisses Brauhaus Logo">
+      </a>
+      <a href="en.html" class="back-link">Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="docs-layout">
+    
+    <!-- Sidebar -->
+    <aside class="docs-sidebar">
+      <h2 class="docs-title">Documents</h2>
+      
+      <!-- Desktop Tab List -->
+      <ul class="nav-tabs">
+        <li><button class="tab-btn active" data-target="privacy">Privacy Policy</button></li>
+        <li><button class="tab-btn" data-target="consent">Consent to Data Processing</button></li>
+        <li><button class="tab-btn" data-target="terms">User Agreement</button></li>
+        <li><button class="tab-btn" data-target="marketing">Promo & Marketing Consent</button></li>
+        <li><button class="tab-btn" data-target="requisites">Organization Details</button></li>
+      </ul>
+
+      <!-- Mobile Selector -->
+      <div class="mobile-selector-wrap">
+        <select class="mobile-selector" id="docSelect">
+          <option value="privacy">Privacy Policy</option>
+          <option value="consent">Consent to Personal Data Processing</option>
+          <option value="terms">User Agreement</option>
+          <option value="marketing">Marketing & Newsletter Consent</option>
+          <option value="requisites">Organization Details</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Main Content Content Pane -->
+    <main class="docs-content">
+
+      <!-- 1. Privacy Policy -->
+      <section class="doc-section active" id="privacy">
+        <h1>Privacy Policy</h1>
+        <p>This Privacy Policy (hereinafter referred to as the Policy) applies to all information that the Site Administration (hereinafter referred to as the Operator) may obtain about the user during their use of the Schneider Weisse Brauhaus website (hereinafter referred to as the Site).</p>
+        
+        <h2>1. General Provisions</h2>
+        <p>1.1. User's use of the Site constitutes agreement to this Privacy Policy and the terms of processing of the user's personal data.</p>
+        <p>1.2. In case of disagreement with the terms of the Policy, the user must stop using the Site.</p>
+        <p>1.3. This Policy applies only to this Site. The Operator does not control and is not responsible for third-party sites to which the user can go via links available on the Site.</p>
+        <p>1.4. The Operator does not verify the accuracy of personal data provided by the Site user.</p>
+
+        <h2>2. Personal Data Subject to Processing</h2>
+        <p>The Operator processes the following personal data of the User, provided when filling out the table booking form:</p>
+        <ul>
+          <li>User Name (for identification and personal communication);</li>
+          <li>Contact phone number (for booking confirmation and communication);</li>
+          <li>Planned booking date and time;</li>
+          <li>Number of guests;</li>
+          <li>Comments on booking (any additional requests left voluntarily).</li>
+        </ul>
+
+        <h2>3. Purposes of Personal Data Collection</h2>
+        <p>The Operator may use the user's personal data to:</p>
+        <ul>
+          <li>Identify the user to process table reservation at Schneider Weisse Brauhaus restaurant;</li>
+          <li>Establish feedback with the user, including sending notifications, phone calls from the administrator to confirm the booking;</li>
+          <li>Provide the user with effective customer and technical support in case of problems related to the use of the Site;</li>
+          <li>Send marketing, news, and special offers (only with the separate consent of the user).</li>
+        </ul>
+
+        <h2>4. Legal Grounds for Data Processing</h2>
+        <p>4.1. Processing of personal data is carried out in accordance with the requirements of the Federal Law of the Russian Federation No. 152-FZ "On Personal Data".</p>
+        <p>4.2. The legal basis for processing is the User's Consent to the processing of personal data, expressed by ticking (accepting) the checkbox before submitting the booking form.</p>
+
+        <h2>5. Storage and Processing of Personal Data</h2>
+        <p>5.1. Processing of user's personal data is carried out without limitation of time in any legal way (collection, recording, systematization, accumulation, storage, clarification, extraction, use, transfer, blocking, deletion).</p>
+        <p>5.2. Personal data of the user is stored on secure servers and is not transferred to third parties, except in cases associated with the execution of the current legislation of the Russian Federation.</p>
+
+        <h2>6. User Rights and Withdrawal of Consent</h2>
+        <p>6.1. The user has the right to obtain information regarding the processing of their personal data, as well as to request its clarification, blocking, or destruction.</p>
+        <p>6.2. To withdraw consent to the processing of personal data or delete data, the user has the right to send a written request to the Operator's email address specified in the "Organization Details" section.</p>
+      </section>
+
+      <!-- 2. Personal Data Consent -->
+      <section class="doc-section" id="consent">
+        <h1>Consent to Personal Data Processing</h1>
+        <p>By filling out the booking form on the Site, the User accepts this Consent to the processing of personal data (hereinafter referred to as the Consent) freely, of their own free will and in their interest.</p>
+        
+        <h2>1. Scope of Consent</h2>
+        <p>Acceptance of the Consent is expressed by checking the mandatory checkbox before submitting the booking form.</p>
+        
+        <h2>2. List of Personal Data</h2>
+        <p>Hereby I give my consent to the Operator to process the following personal data:</p>
+        <ul>
+          <li>Name;</li>
+          <li>Contact phone number;</li>
+          <li>Planned date and time of visit;</li>
+          <li>Number of guests;</li>
+          <li>Comments and preferences for booking.</li>
+        </ul>
+
+        <h2>3. Actions with Personal Data</h2>
+        <p>Consent is given for the performance of the following actions using automation tools or without them: collection, systematization, accumulation, storage, clarification (updating, modification), extraction, use, transfer, depersonalization, blocking, deletion, and destruction of personal data.</p>
+
+        <h2>4. Processing Purposes</h2>
+        <p>Processing of personal data is carried out solely for the purpose of reservation services at Schneider Weisse Brauhaus restaurant, communicating with the client to confirm the reservation, and providing information on the order.</p>
+
+        <h2>5. Validity Period</h2>
+        <p>Consent is valid from the moment of its provision until the processing purposes are achieved or until it is withdrawn by the User by sending a request to the Operator's email.</p>
+      </section>
+
+      <!-- 3. User Agreement -->
+      <section class="doc-section" id="terms">
+        <h1>User Agreement</h1>
+        <p>This User Agreement (hereinafter referred to as the Agreement) governs the use of the Site by users (hereinafter referred to as the User) and the Site Administration (hereinafter referred to as the Operator).</p>
+        
+        <h2>1. Rights and Obligations of the User</h2>
+        <p>1.1. The User agrees to use the Site solely for lawful purposes, without violating the rights of third parties and without hindering the operation of the Site.</p>
+        <p>1.2. The User has the right to get acquainted with information about the restaurant, menu, prices, services, and reserve tables through the interactive forms of the Site.</p>
+        <p>1.3. When booking, the User agrees to provide accurate and correct details.</p>
+
+        <h2>2. Rules for Using Site Information</h2>
+        <p>2.1. All content of the Site (texts, graphics, logos, design elements) is copyrighted and protected by intellectual property laws.</p>
+        <p>2.2. Any copying, reproduction, or citation of materials is allowed only with the consent of the Operator and the presence of an active link to the Site.</p>
+
+        <h2>3. Limitations of Liability</h2>
+        <p>3.1. The Operator makes every effort to ensure the correct operation of the Site, but does not guarantee constant uninterrupted availability of the Site and the absence of technical errors.</p>
+        <p>3.2. The Operator is not liable for losses or damages incurred by the User as a result of using the Site information.</p>
+        <p>3.3. Booking via the website is preliminary and requires mandatory phone confirmation from the restaurant administrator.</p>
+
+        <h2>4. Changes to the Agreement</h2>
+        <p>4.1. The Operator reserves the right to change this Agreement unilaterally without prior notice to the User.</p>
+        <p>4.2. The new version of the Agreement comes into force from the moment of its publication on this page.</p>
+      </section>
+
+      <!-- 4. Marketing Consent -->
+      <section class="doc-section" id="marketing">
+        <h1>Marketing & Newsletter Consent</h1>
+        <p>By ticking the box "I agree to receive news and special offers", the User freely, of their own free will and in their interest, gives consent to receive news, promo updates, and special offers from the Administration of Schneider Weisse Brauhaus restaurant.</p>
+        
+        <h2>1. Communication Channels</h2>
+        <p>Marketing communications can be carried out in the following ways:</p>
+        <ul>
+          <li>By sending SMS messages to the specified phone number;</li>
+          <li>Through messengers (Telegram, WhatsApp, etc.) linked to the phone number;</li>
+          <li>By information phone calls.</li>
+        </ul>
+
+        <h2>2. Content of Communications</h2>
+        <p>Consent applies to receiving information about:</p>
+        <ul>
+          <li>Current and upcoming promotions of the restaurant;</li>
+          <li>Updates of main and seasonal menus;</li>
+          <li>Special gastronomic dinners and events;</li>
+          <li>Holiday greetings and personal discounts.</li>
+        </ul>
+
+        <h2>3. Withdrawal of Consent</h2>
+        <p>The User has the right to opt-out of receiving promotional materials at any time by notifying the restaurant administrator by phone or sending a request to the Operator's email.</p>
+      </section>
+
+      <!-- 5. Requisites -->
+      <section class="doc-section" id="requisites">
+        <h1>Organization Details</h1>
+        <p>Legal and contact information of the organization operating this online resource:</p>
+        
+        <table class="requisites-table">
+          <tr>
+            <th>Full Legal Name</th>
+            <td>Restaurant Alliance LLC <span class="editable-hint">(editable template)</span></td>
+          </tr>
+          <tr>
+            <th>INN</th>
+            <td>6164000000 <span class="editable-hint">(editable template)</span></td>
+          </tr>
+          <tr>
+            <th>OGRN</th>
+            <td>1156196000000 <span class="editable-hint">(editable template)</span></td>
+          </tr>
+          <tr>
+            <th>Legal Address</th>
+            <td>344002, Rostov Region, Rostov-on-Don, Beregovaya St., 27V <span class="editable-hint">(editable template)</span></td>
+          </tr>
+          <tr>
+            <th>Actual Address</th>
+            <td>344002, Rostov Region, Rostov-on-Don, Beregovaya St., 27V <span class="editable-hint">(editable template)</span></td>
+          </tr>
+          <tr>
+            <th>Phone</th>
+            <td>+7 (928) 270-92-42</td>
+          </tr>
+          <tr>
+            <th>E-mail</th>
+            <td>info@schneider-weisse.ru <span class="editable-hint">(editable template)</span></td>
+          </tr>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 Schneider Weisse Brauhaus (Rostov-on-Don). All rights reserved.</p>
+      <p>Official legal documents of the restaurant.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const sections = document.querySelectorAll('.doc-section');
+      const mobileSelect = document.getElementById('docSelect');
+
+      // Tab switcher function
+      function switchTab(targetId) {
+        // Update Desktop
+        tabs.forEach(btn => {
+          if (btn.getAttribute('data-target') === targetId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        // Update Mobile
+        mobileSelect.value = targetId;
+
+        // Show Section
+        sections.forEach(section => {
+          if (section.id === targetId) {
+            section.classList.add('active');
+          } else {
+            section.classList.remove('active');
+          }
+        });
+
+        // Update URL query without reload
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?doc=' + targetId;
+        window.history.pushState({path:newUrl},'',newUrl);
+      }
+
+      // Desktop Tab Click
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+          switchTab(target);
+        });
+      });
+
+      // Mobile Select Change
+      mobileSelect.addEventListener('change', (e) => {
+        switchTab(e.target.value);
+      });
+
+      // Read query params on load
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialDoc = urlParams.get('doc');
+      if (initialDoc && document.getElementById(initialDoc)) {
+        switchTab(initialDoc);
+      }
+    });
+  </script>
+</body>
+</html>
