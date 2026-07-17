@@ -17,6 +17,62 @@ document.addEventListener('DOMContentLoaded', () => {
   // Global elements
   const preloader = document.getElementById('preloader');
   const siteHeader = document.getElementById('site-header');
+  const burgerToggle = document.getElementById('burger-toggle');
+  const mobileNav = document.getElementById('mobile-nav-panel');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  let menuTimeline;
+
+  function closeMenu() {
+    if (!mobileNav || !mobileNav.classList.contains('open')) return;
+    mobileNav.classList.remove('open');
+    if (burgerToggle) {
+      burgerToggle.classList.remove('active');
+      burgerToggle.setAttribute('aria-expanded', 'false');
+    }
+    if (lenis) lenis.start();
+
+    if (typeof gsap !== 'undefined') {
+      if (menuTimeline) menuTimeline.kill();
+      menuTimeline = gsap.timeline();
+      
+      menuTimeline.to(mobileNavLinks, { opacity: 0, y: -20, duration: 0.3, ease: 'power2.in' })
+                  .to('.mobile-nav-content', { opacity: 0, duration: 0.2 }, '-=0.2')
+                  .to('.menu-bg-layer-3', { xPercent: 100, duration: 0.5, ease: 'power3.inOut' }, '-=0.1')
+                  .to('.menu-bg-layer-2', { xPercent: 100, duration: 0.5, ease: 'power3.inOut' }, '-=0.4')
+                  .to('.menu-bg-layer-1', { xPercent: 100, duration: 0.5, ease: 'power3.inOut' }, '-=0.4');
+    }
+  }
+
+  function openMenu() {
+    if (!mobileNav || mobileNav.classList.contains('open')) return;
+    mobileNav.classList.add('open');
+    if (burgerToggle) {
+      burgerToggle.classList.add('active');
+      burgerToggle.setAttribute('aria-expanded', 'true');
+    }
+    if (lenis) lenis.stop();
+
+    if (typeof gsap !== 'undefined') {
+      if (menuTimeline) menuTimeline.kill();
+      menuTimeline = gsap.timeline();
+
+      menuTimeline.to('.menu-bg-layer-1', { xPercent: 0, duration: 0.6, ease: 'power3.inOut' })
+                  .to('.menu-bg-layer-2', { xPercent: 0, duration: 0.6, ease: 'power3.inOut' }, '-=0.45')
+                  .to('.menu-bg-layer-3', { xPercent: 0, duration: 0.6, ease: 'power3.inOut' }, '-=0.45')
+                  .to('.mobile-nav-content', { opacity: 1, duration: 0.3 }, '-=0.2')
+                  .fromTo(mobileNavLinks, 
+                    { opacity: 0, y: 50, rotate: 3, filter: 'blur(5px)' }, 
+                    { opacity: 1, y: 0, rotate: 0, filter: 'blur(0px)', duration: 0.6, stagger: 0.06, ease: 'power3.out' }, 
+                    '-=0.15'
+                  )
+                  .fromTo('.mobile-nav-footer', 
+                    { opacity: 0, y: 20 }, 
+                    { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 
+                    '-=0.3'
+                  );
+    }
+  }
 
   /* ==========================================================================
      1. CANVAS PRELOADER (Smoke & floating gold particles)
@@ -194,8 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         e.preventDefault();
         
-        burgerToggle.classList.remove('active');
-        mobileNav.classList.remove('open');
+        closeMenu();
         
         if (lenis) {
           lenis.scrollTo(target, { offset: -80 });
@@ -405,40 +460,18 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      7. BURGER & MOBILE PANEL NAVIGATION
      ========================================================================== */
-  const burgerToggle = document.getElementById('burger-toggle');
-  const mobileNav = document.getElementById('mobile-nav-panel');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
   if (burgerToggle && mobileNav) {
     burgerToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      burgerToggle.classList.toggle('active');
-      burgerToggle.setAttribute('aria-expanded', isOpen);
-
-      if (lenis) {
-        if (isOpen) lenis.stop();
-        else lenis.start();
-      }
-
-      if (isOpen && typeof gsap !== 'undefined') {
-        gsap.from(mobileNavLinks, {
-          opacity: 0,
-          filter: 'blur(10px)',
-          y: 40,
-          duration: 0.7,
-          stagger: 0.08,
-          ease: 'power3.out',
-          delay: 0.2
-        });
+      if (mobileNav.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
       }
     });
 
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        burgerToggle.classList.remove('active');
-        burgerToggle.setAttribute('aria-expanded', 'false');
-        if (lenis) lenis.start();
+        closeMenu();
       });
     });
   }
