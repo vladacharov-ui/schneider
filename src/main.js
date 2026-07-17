@@ -930,6 +930,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       if (!bookingModal) return;
       
+      closeMenu();
+      
       bookingModal.classList.add('open');
       if (lenis) lenis.stop();
 
