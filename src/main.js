@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let menuTimeline;
 
+  // Initialize menu layers off-screen to avoid CSS transform parsing conflicts
+  if (typeof gsap !== 'undefined') {
+    gsap.set('.menu-bg-layer', { xPercent: 100 });
+  }
+
   function closeMenu() {
     if (!mobileNav || !mobileNav.classList.contains('open')) return;
     mobileNav.classList.remove('open');

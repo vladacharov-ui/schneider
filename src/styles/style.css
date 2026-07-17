@@ -625,7 +625,7 @@ p {
   justify-content: space-between;
   width: 26px;
   height: 16px;
-  z-index: 1010;
+  z-index: 99999;
 }
 
 .burger-menu span {
@@ -659,13 +659,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   pointer-events: none;
   opacity: 1;
+  transition: background-color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .mobile-nav-overlay.open {
-  pointer-events: auto;
+  pointer-events: auto !important;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .menu-bg-layer {
@@ -702,6 +704,10 @@ p {
   gap: 40px;
   opacity: 0;
   pointer-events: none;
+}
+
+.mobile-nav-overlay.open .mobile-nav-content {
+  pointer-events: auto !important;
 }
 
 .mobile-menu-list {
