@@ -1543,6 +1543,15 @@ p {
   resize: vertical;
 }
 
+.booking-checkboxes {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
 .interactive-form input:not([type="checkbox"]):focus,
 .interactive-form select:focus,
 .interactive-form textarea:focus {
@@ -1975,21 +1984,60 @@ p {
   /* Mobile modal adjustments */
   .modal-overlay {
     align-items: flex-start !important;
-    padding: 30px 15px !important;
+    padding: 10px 10px !important;
   }
   .modal-container {
     width: 100% !important;
-    margin: 20px 0 !important;
+    margin: 5px 0 !important;
   }
   .modal-info {
-    padding: 25px 20px !important;
+    padding: 18px 15px !important;
+  }
+  .modal-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 8px !important;
+  }
+  .modal-tag {
+    margin-bottom: 4px !important;
   }
   .modal-close {
-    top: 15px !important;
-    right: 15px !important;
-    width: 38px !important;
-    height: 38px !important;
-    font-size: 0.95rem !important;
+    top: 10px !important;
+    right: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+  }
+  .interactive-form {
+    gap: 10px !important;
+  }
+  .form-group label {
+    margin-bottom: 4px !important;
+    font-size: 0.65rem !important;
+    height: auto !important;
+  }
+  .interactive-form input:not([type="checkbox"]),
+  .interactive-form select {
+    height: 42px !important;
+    line-height: 40px !important;
+    padding: 0 12px !important;
+    font-size: 0.85rem !important;
+    background-position: right 14px center !important;
+  }
+  .booking-checkboxes {
+    margin-top: 4px !important;
+    margin-bottom: 8px !important;
+    gap: 6px !important;
+  }
+  .booking-checkboxes .checkbox-container {
+    font-size: 0.65rem !important;
+    gap: 8px !important;
+  }
+  .booking-checkboxes .checkbox-container input {
+    margin-top: 1px !important;
+  }
+  .btn-block {
+    padding: 12px 20px !important;
+    font-size: 0.85rem !important;
   }
 
   :root {
