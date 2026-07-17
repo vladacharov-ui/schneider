@@ -1919,6 +1919,15 @@ p {
   .burger-menu {
     display: flex;
   }
+  .logo-title {
+    display: none;
+  }
+  .btn-nav-cta {
+    display: none;
+  }
+  .lang-switch {
+    display: none;
+  }
   .grid-two {
     grid-template-columns: 1fr;
     gap: 60px;
